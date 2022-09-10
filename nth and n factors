@@ -1,0 +1,32 @@
+write a C program to find the nth factor.
+
+#include<stdio.h>
+int main()
+{
+	int a,c=0,n;
+	printf("given number:");
+	scanf("%d",&a);
+	printf("n:");
+	scanf("%d",&n);
+  if(n>0)
+  {
+	for(int i=1;i<a;i++)
+	{
+		if(a%i==0)
+		{
+			c++;
+			if(c==n)
+			{
+				printf("nth factor is:%d",i);
+				printf("\n");
+			}
+		}
+	}
+	printf("no of factors:%d",c);
+  }
+  else 
+  {
+  printf("Invalid input");
+  }
+}
+
