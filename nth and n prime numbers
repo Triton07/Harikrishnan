@@ -1,4 +1,4 @@
-write a C program to find the nth factor.
+write a C program to find the n and nth prime number.
 
 #include<stdio.h>
 int main()
