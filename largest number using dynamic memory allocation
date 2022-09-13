@@ -1,0 +1,85 @@
+Write a C progrm to find the largest number using Dynamic Memory allocation :
+
+#include<stdio.h>
+#include<stdlib.h>
+int main() 
+{
+  int n;
+  float *p;
+  printf("Enter the total number of elements: ");
+  scanf("%d", &n);
+// Allocating memory for n elements
+  p = (float *)calloc(n, sizeof(float));
+  if (p == NULL) 
+  {
+  	printf("memory is not allocated.");
+  	exit(0);
+  }
+// Storing numbers entered by the user.
+  for (int i = 0; i < n; ++i) 
+  {
+  	printf("Enter number%d: ", i + 1);
+  	scanf("%f", p + i);
+  }
+
+  // Finding the largest number
+  for (int i = 1; i < n; ++i) 
+  {
+    if (*p < *(p + i)) 
+	{
+      *p = *(p + i);
+    }
+  }
+  printf("Largest number = %.f", *p);
+  free(p);
+  return 0;
+}
+
+Test cases:
+
+Case 1:
+Enter the total number of elements: 6
+Enter number1: 0
+Enter number2: 1
+Enter number3: 3
+Enter number4: 8
+Enter number5: 7
+Enter number6: -5
+Largest number = 8
+
+Case 2:
+Enter the total number of elements: 6
+Enter number1: 5
+Enter number2: 5
+Enter number3: 5
+Enter number4: 5
+Enter number5: 5
+Enter number6: 5.4
+Largest number = 5.4
+
+Case 3:
+Enter the total number of elements: 6
+Enter number1: -2
+Enter number2: 2
+Enter number3: -2
+Enter number4: 4
+Enter number5: -2
+Enter number6: -4
+Largest number = 4
+
+Case 4:
+Enter the total number of elements: 4
+Enter number1: -5
+Enter number2: 55
+Enter number3: 30
+Enter number4: 0.5
+Largest number = 55
+
+Case 5:
+Enter the total number of elements: 5
+Enter number1: 0.2
+Enter number2: 2
+Enter number3: 4
+Enter number4: 5
+Enter number5: 8
+Largest number = 8
