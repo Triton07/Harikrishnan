@@ -11,38 +11,52 @@ int main()
 	{
 		printf("Enter the salary = ");
 		scanf("%f",&salary);
-		if(salary>10000)
+		if(salary>0)
 		{
-			bonus=salary*0.5;
-			s=salary+bonus;
-			printf("The bonus amount = %f",bonus);
-			printf("\nThe total amount = %f",s);
+			if(salary>10000)
+			{
+				bonus=salary*0.5;
+				s=salary+bonus;
+				printf("The bonus amount = %f",bonus);
+				printf("\nThe total amount = %f",s);
+			}
+			else 
+			{
+				bonus=salary*0.7;
+				s=salary+bonus;
+				printf("The bonus amount = %f",bonus);
+				printf("\nThe total amount = %f",s);
+			}
 		}
 		else 
 		{
-			bonus=salary*0.7;
-			s=salary+bonus;
-			printf("The bonus amount = %f",bonus);
-			printf("\nThe total amount = %f",s);
+			printf("Invalid Input");
 		}
 	}
 	else if(grade=='B')
 	{
 		printf("Enter the salary = ");
 		scanf("%f",&salary);
-		if(salary>10000)
+		if(salary>0)
 		{
-			bonus=salary*0.10;
-			s=salary+bonus;
-			printf("The bonus amount = %f",bonus);
-			printf("\nThe total amount = %f",s);
+			if(salary>10000)
+			{
+				bonus=salary*0.10;
+				s=salary+bonus;
+				printf("The bonus amount = %f",bonus);
+				printf("\nThe total amount = %f",s);
+			}
+			else 
+			{
+				bonus=salary*0.10;
+				s=salary+bonus;
+				printf("The bonus amount = %f",bonus);
+				printf("\nThe total amount = %f",s);		
+			}
 		}
 		else 
 		{
-			bonus=salary*0.10;
-			s=salary+bonus;
-			printf("The bonus amount = %f",bonus);
-			printf("\nThe total amount = %f",s);		
+			printf("Invalid Input");
 		}
 	}
 	else 
