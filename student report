@@ -57,4 +57,21 @@ int main()
 	}
 	return 0;
 }
+Test Cases:
+
+Case 1:
+Enter the python mark= 18
+Enter the C program mark= 76
+Enter the mathematics mark= 93
+Enter the physics marks= 65
+Sorry,You Failed or Invalid input
+
+Case 2:
+Enter the python mark= 73
+Enter the C program mark= 78
+Enter the mathematics mark= 79
+Enter the physics marks= 75
+Total is 305
+Average is 76.000000
+you passed by Distinction
 
