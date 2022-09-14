@@ -51,3 +51,29 @@ int main()
 	}
 	return 0;
 }
+Test Cases:
+
+Case 1:
+Enter your grade = A
+Enter the salary = 8000
+The bonus amount = 5600.000000
+The total amount = 13600.000000
+
+case 2:;
+Enter your grade = C
+Invalid Input
+
+Case 3:
+Enter your grade = B
+Enter the salary = 0
+The bonus amount = 0.000000
+The total amount = 0.000000
+
+Case 4:
+Enter your grade = 38000
+Invalid Input
+
+Case 5:
+Enter your grade = B
+Enter the salary = -8000
+Invalid Input
