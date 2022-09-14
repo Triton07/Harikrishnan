@@ -1,0 +1,53 @@
+Write a c Program to print the employee salary,bonus by getting the input as salary:
+
+#include<stdio.h>
+int main()
+{
+	float s,salary,bonus;
+	char grade;
+	printf("Enter your grade = ");
+	scanf("%c",&grade);
+	if(grade=='A')
+	{
+		printf("Enter the salary = ");
+		scanf("%f",&salary);
+		if(salary>10000)
+		{
+			bonus=salary*0.5;
+			s=salary+bonus;
+			printf("The bonus amount = %f",bonus);
+			printf("\nThe total amount = %f",s);
+		}
+		else 
+		{
+			bonus=salary*0.7;
+			s=salary+bonus;
+			printf("The bonus amount = %f",bonus);
+			printf("\nThe total amount = %f",s);
+		}
+	}
+	else if(grade=='B')
+	{
+		printf("Enter the salary = ");
+		scanf("%f",&salary);
+		if(salary>10000)
+		{
+			bonus=salary*0.10;
+			s=salary+bonus;
+			printf("The bonus amount = %f",bonus);
+			printf("\nThe total amount = %f",s);
+		}
+		else 
+		{
+			bonus=salary*0.10;
+			s=salary+bonus;
+			printf("The bonus amount = %f",bonus);
+			printf("\nThe total amount = %f",s);		
+		}
+	}
+	else 
+	{
+		printf("Invalid Input");
+	}
+	return 0;
+}
