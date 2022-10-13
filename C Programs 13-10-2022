@@ -1,0 +1,183 @@
+C PROGRAMS(13/10/2022)
+
+1.Write a C program to find kth smallest element in an Array:
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int arr[500],i,j,n,temp,k;
+	printf("Enter te number of elements in the array = ");
+    scanf("%d",&n);
+    if(n>0)
+    {
+     printf("Enter a number = ");
+    for(i=0;i<n;i++) 
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+
+    printf("Elements of array after sorting = ");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+
+    printf("\nWhich smallest element = ");
+    scanf("%d",&k);
+    printf("Desired smallest element is %d\n",arr[k-1]);
+}
+    else
+    {
+		printf("Invalid input");
+	}
+}
+
+Q2.Write a C program tp find the largest two elements ina a given array.
+
+#include <stdio.h>
+int main()
+{
+    int a[100];
+	int n,i,first = -1,second = -1;
+    printf("Enter the number of elements : ");
+    scanf("%d",&n);
+    printf("Enter the elements : ");
+    for(i=0; i < n; i++)
+	{
+        scanf("%d", &a[i]);
+    }
+    for(i=0; i<n; i++){
+      if(a[i] > first)
+	  {
+        second= first;
+        first = a[i];
+      }
+	  else if(a[i] > second)
+	  {
+        second = a[i];
+      }
+    }
+    printf("\nFirst largest number is %d\n",first);
+    printf("Second largest number is %d\n",second);
+}
+
+Q3. Write a C program to find insert an element in an Array.
+
+#include<stdio.h>
+int main()
+{
+   int s[100],p,i,n,v;
+   printf("Enter the total number of elements in array = ");
+   scanf("%d",&n);
+   if(n>0)
+   {
+	   printf("Enter the elements = ");
+	   for(i=0;i<n;i++)
+		{
+	      scanf("%d",&s[i]);
+		}
+		if(s[i]>0)
+		{
+		   printf("Enter the position = ");
+		   scanf("%d",&p);
+		   printf("enter the value to be Inserted = ");
+		   scanf("%d",&v);
+		   for(i=n-1;i>=p-1;i--)
+		    s[i+1]=s[i];
+		   	s[p-1]=v;
+		   printf("Array after inserting the value = ");
+		   for(i=0;i<=n;i++)
+			{
+		      printf("%d ",s[i]);
+		  	}
+	  	}
+	  	else 
+	  	{
+	  		printf("Invalid Input");
+		  }
+  }
+  else 
+  {
+  	printf("Invalid Input");
+  }
+   return 0;
+}
+
+Q4. Write a C Program to find the Sum and Difference of mth Minimum and nth Maximum of the given Array .
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int arr[500],i,j,n,temp,k,l;
+	printf("Enter te number of elements in the array = ");
+    scanf("%d",&n);
+    if(n>0)
+    {
+     printf("Enter a number = ");
+    for(i=0;i<n;i++) 
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    printf("\nmth maximum element = ");
+    scanf("%d",&k);
+    printf("Desired smallest element is %d\n",arr[k-1]);   
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]<arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+
+
+    printf("\nnth minimum element = ");
+    scanf("%d",&l);
+    printf("Desired Largest element is %d\n",arr[l-1]);
+    if(k<n && l<n)
+    {
+    printf("The sum of the smallest and largest = %d\n",arr[k-1] + arr[l-1]);
+    printf("The difference of the smallest and largest = %d\n",arr[l-1]-arr[k-1]);
+}
+else 
+{
+	printf("Invalid Input");
+}
+		}
+    else
+    {
+		printf("Invalid input");
+	}
+}
