@@ -3,22 +3,22 @@ Write a C program to compute sum of all elements in an array using pointer.
 #include<stdio.h>
 int main()
 {
-	int arr[100];
-   	int i, sum=0,n;
-   	int *ptr;
+	float arr[100],sum=0;
+   	int i,n;
+   	float *ptr;
 	printf("Enter the total no of elements = ");
 	scanf("%d",&n);
    	printf("\nEnter array elements :\n");
    	for(i=1;i<=n;i++)
    	{
    		printf("Element %d = ",i);
-    	scanf("%d",&arr[i]);
+    	scanf("%f",&arr[i]);
 	}
    	ptr = arr;
-   	for(i=0;i<5;i++) 
+   	for(i=0;i<n;i++) 
    	{
       sum = sum + *ptr;
       ptr++;
    	}
-   	printf("\nThe sum is: %d",sum);
+   	printf("\nThe sum is: %f",sum);
 }
