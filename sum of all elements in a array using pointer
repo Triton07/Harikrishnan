@@ -15,7 +15,7 @@ int main()
     	scanf("%f",&arr[i]);
 	}
    	ptr = arr;
-   	for(i=0;i<n;i++) 
+   	for(i=0;i<n+1;i++) 
    	{
       sum = sum + *ptr;
       ptr++;
